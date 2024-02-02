@@ -38,7 +38,7 @@
 }
 
 header {
-  background-color: #282c34;
+  background-color: #221f1f;
 }
 
 .icons {
@@ -81,7 +81,7 @@ header {
 }
 
 footer {
-  background-color: #282c34;
+  background-color: #221f1f;
 }
 
 .spanbutton {
@@ -93,5 +93,19 @@ footer {
 }
 
 main {
-  background-color: #282c34;
+  background-color: #221f1f;
+}
+
+.col img {
+  transition: transform 0.2s;
+}
+
+.col img:hover {
+  transform: scale(1.1);
+}
+
+#dropdown-basic {
+  background-color: #221f1f;
+  border-color: #6c757d;
+  border-radius: 0;
 }

@@ -1,37 +1,23 @@
+import { Dropdown } from 'react-bootstrap'
+
 const Hero = () => {
   return (
     <>
-      <div class="container-fluid px-4">
+      <div className="container-fluid px-4 pt-3">
         <div className="d-flex justify-content-between">
           <div className="d-flex">
             <h2 className="mb-4 text-white">TV Shows</h2>
             <div className="btn-group" role="group">
               <div className="dropdown ms-4 mt-1">
-                <button
-                  type="button"
-                  className="btn btn-secondary btn-sm dropdown-toggle rounded-0"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Genres
-                </button>
-                <ul className="dropdown-menu">
-                  <li>
-                    <a className="dropdown-item" href=".">
-                      Comedy
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href=".">
-                      Drama
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href=".">
-                      Thriller
-                    </a>
-                  </li>
-                </ul>
+                <Dropdown>
+                  <Dropdown.Toggle id="dropdown-basic">Genres</Dropdown.Toggle>
+
+                  <Dropdown.Menu>
+                    <Dropdown.Item href="#/action-1">Comedy</Dropdown.Item>
+                    <Dropdown.Item href="#/action-2">Drama</Dropdown.Item>
+                    <Dropdown.Item href="#/action-3">Thriller</Dropdown.Item>
+                  </Dropdown.Menu>
+                </Dropdown>
               </div>
             </div>
           </div>
