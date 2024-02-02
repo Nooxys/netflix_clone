@@ -115,7 +115,7 @@ const MyFooter = () => {
               </div>
             </div>
             <div className="row">
-              <div className="col mb-2 mt-2 copyright">
+              <div className="col mb-5 mt-2 copyright">
                 © 1997-2023 Netflix, Inc.
               </div>
             </div>

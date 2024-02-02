@@ -46,7 +46,7 @@ class MyRow extends Component {
           {/* ^^^^^^ ALERT PER ERRORE  NEL CARICAMENTO DATI ^^^^^*/}
 
           <h4 className="text-white">{this.props.name}</h4>
-          <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-4 row-cols-xl-6 pb-4">
+          <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-4 row-cols-xl-6 pb-4 justify-content-center ">
             {this.state.loading && (
               <Spinner animation="border" variant="danger"></Spinner>
             )}
@@ -72,7 +72,7 @@ class MyRow extends Component {
               : this.state.films.map((film) => {
                   return (
                     <div
-                      className="col mb-2 text-center px-2 "
+                      className="col mb-2 text-center px-2  "
                       key={film.imdbID}
                     >
                       <img

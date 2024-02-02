@@ -109,3 +109,7 @@ main {
   border-color: #6c757d;
   border-radius: 0;
 }
+
+#easter_egg {
+  background-color: #221f1f;
+}
