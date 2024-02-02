@@ -36,3 +36,62 @@
     transform: rotate(360deg);
   }
 }
+
+header {
+  background-color: #282c34;
+}
+
+.icons {
+  margin-left: 0.8em;
+  margin-right: 0.8em;
+  font-size: 1.2em;
+  color: #f5f5f1;
+}
+
+.navbar-nav {
+  font-size: 90%;
+}
+
+#kids {
+  color: #f5f5f1;
+  font-size: 0.8em;
+}
+
+.footer-icon {
+  color: #838383;
+}
+
+.footer-links {
+  font-size: 0.8em;
+}
+
+.footer-links p {
+  margin-bottom: 0.3em;
+  color: #838383;
+}
+
+.footer-links a {
+  color: #838383;
+  text-decoration: none;
+}
+
+.copyright {
+  color: #838383;
+  font-size: 0.6em;
+}
+
+footer {
+  background-color: #282c34;
+}
+
+.spanbutton {
+  color: #838383;
+}
+
+#footerbutton {
+  border-color: #838383;
+}
+
+main {
+  background-color: #282c34;
+}
