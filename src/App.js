@@ -9,37 +9,37 @@ import ProfileHeader from './components/ProfileHeader'
 import ProfileMain from './components/ProfileMain'
 import ProfileFooter from './components/ProfileFooter'
 import Credits from './components/Credits'
-
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import TVShows from './components/TVShows'
+import Details from './components/Details'
 function App() {
   return (
     <>
-      <header>
-        <MyHeader />
-      </header>
-      <main>
-        <Hero />
-        <MyRow name="Trending Now" filmName="Star Wars" />
-        <MyRow name="Watch it Again" filmName="The Lord Of The Rings" />
-        <MyRow name="New Releases" filmName="Harry Potter" />
-        <MyRow
-          name="Because You Watched: ' Halloween '"
-          filmName="The Conjuring"
-        />
-        <MyRow name="Extra for You" filmName="V For Vengeance" />
-      </main>
-      <footer>
-        <MyFooter />
-      </footer>
-      {/* ---------------------------- vvvvvvvv Pagina Profile vvvvvvvv */}
-      <div id="easter_egg">
-        <ProfileHeader />
-        <ProfileMain />
-        <ProfileFooter />
+      <BrowserRouter>
+        <header>
+          <MyHeader />
+        </header>
+        <main>
+          <Routes>
+            <Route element={<Details />} path="/Details/:movieID" />
+            <Route element={<TVShows />} path="/TVShows" />
+            {/* <Route element={<NotFound />} path="*" /> */}
+          </Routes>
+        </main>
+        <footer>
+          <MyFooter />
+        </footer>
+        {/* ---------------------------- vvvvvvvv Pagina Profile vvvvvvvv */}
+        <div id="easter_egg">
+          <ProfileHeader />
+          <ProfileMain />
+          <ProfileFooter />
 
-        {/* Dato che ero " Out of Time " e non avevo la Settings Page, ho fatto una piccola Sezioncina! */}
+          {/* Dato che ero " Out of Time " e non avevo la Settings Page, ho fatto una piccola Sezioncina! */}
 
-        <Credits />
-      </div>
+          <Credits />
+        </div>
+      </BrowserRouter>
     </>
   )
 }

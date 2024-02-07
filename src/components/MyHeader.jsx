@@ -1,43 +1,80 @@
 import logo from '../assets/logo.png'
+import { Link, useLocation } from 'react-router-dom'
 
 const MyHeader = () => {
+  const location = useLocation()
+
   return (
     <>
       <nav className="navbar navbar-expand-lg " data-bs-theme="dark">
         <div className="container-fluid">
-          <a className="navbar-brand" href="/#">
+          <Link to="/" className="navbar-brand">
             <img src={logo} width={100} height={55} alt="logo" />
-          </a>
-
+          </Link>
           <div
             className="navbar-collapse collapse show"
             id="navbarSupportedContent"
           >
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active fw-bold" href="/#">
+                <Link
+                  className={
+                    location.pathname === '/'
+                      ? 'nav-link active fw-bold'
+                      : 'nav-link fw-bold'
+                  }
+                  to="/"
+                >
                   Home
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link fw-bold" href="/#">
-                  TV Shows
-                </a>
+                <Link
+                  className={
+                    location.pathname === '/TVShows'
+                      ? 'nav-link active fw-bold'
+                      : 'nav-link fw-bold'
+                  }
+                  to="/TVShows"
+                >
+                  TVShows
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link fw-bold" href="/#">
+                <Link
+                  className={
+                    location.pathname === '/Movies'
+                      ? 'nav-link active fw-bold'
+                      : 'nav-link fw-bold'
+                  }
+                  to="/Movies"
+                >
                   Movies
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link fw-bold" href="/#">
+                <Link
+                  className={
+                    location.pathname === '/RecentlyAdded'
+                      ? 'nav-link active fw-bold'
+                      : 'nav-link fw-bold'
+                  }
+                  to="/RecentlyAdded"
+                >
                   Recently Added
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link fw-bold" href="/#">
+                <Link
+                  className={
+                    location.pathname === '/MyList'
+                      ? 'nav-link active fw-bold'
+                      : 'nav-link fw-bold'
+                  }
+                  to="/MyList"
+                >
                   My List
-                </a>
+                </Link>
               </li>
             </ul>
             <div className="d-flex align-items-center my-4 my-lg-0">

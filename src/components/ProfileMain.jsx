@@ -72,7 +72,7 @@ const ProfileMain = () => {
                   />
                   <label
                     className="form-check-label ms-3 text-white"
-                    for="flexCheckDefault"
+                    htmlFor="flexCheckDefault"
                   >
                     Autoplay next episode in a series on all devices.
                   </label>
@@ -85,7 +85,7 @@ const ProfileMain = () => {
                 />
                 <label
                   className="form-check-label ms-3 text-white"
-                  for="flexCheckDefault"
+                  htmlFor="flexCheckDefault"
                 >
                   Autoplay previews while browsing on all devices.
                 </label>
